@@ -28,38 +28,37 @@ PUT = TO SEND FILE TO SERVER.
 
 Different scenarios handled:
 
-1.When correct file is requested using GET.
+1. When correct file is sent using PUT(the file is not already present in the server side)
 
-> ./tftp_s 4900 <br>
-> ./tftp_c localhost 4900 GET readme.txt
-
-Newfile, readme.txt_GET is created, and the file is transferred from server to client!!
-
-2. When correct file is sent using PUT(the file is not already present in the server side)
-
-> ./tftp_s 1025 <br>
-> ./tftp_c localhost 1025 PUT readme.txt
+> ./tftp_s 8090 <br>
+> ./tftp_c localhost 8090 PUT abc.txt
 
 Newfile, readme.txt_server is created, and the file is transferred from client to server!!
 
+2.When correct file is requested using GET.
+
+> ./tftp_s 8090 <br>
+> ./tftp_c localhost 8090 GET abc.txt
+
+Newfile, readme.txt_GET is created, and the file is transferred from server to client!!
 
 3. When incorrect file is requested using GET(i.e, the file that is not present in the server)
 
-> ./tftp_s 2025 <br>
-> ./tftp_c localhost 2025 GET dummy.txt
+> ./tftp_s 7890 <br>
+> ./tftp_c localhost 7890 GET xyz.txt
 
 Error, the client and server side connection is terminated!!
 
 4. When incorrect file is sent using PUT(i.e, the file which is already in server is sent again)
 
-> ./tftp_s 3025 <br>
-> ./tftp_c localhost 3025 PUT readme.txt
+> ./tftp_s 7890 <br>
+> ./tftp_c localhost 7890 PUT abc.txt
 
 Note if this case is run after case 2, error occurs, else the file is transferred to server and a new file is created!!
 
 5. When incorrect file is sent using PUT(i.e, the file which is not present in client)
 
-> ./tftp_s 4025 <br>
-> ./tftp_c localhost 4025 PUT dummy.txt
+> ./tftp_s 7890 <br>
+> ./tftp_c localhost 7890 PUT xyz.txt
 
 Error, the client and the server side connection is terminated!! 
