@@ -34,7 +34,7 @@ Different scenarios handled:
 > ./tftp_c localhost 8090 PUT abc.txt
 
 <div>
-  <img src="./Screenshot/PUT_example.png" alt="Sorting" height="400dp">
+  <img src="./Screenshot/PUT_example.png" height="400dp">
 </div>
 
 
@@ -46,7 +46,7 @@ Newfile, readme.txt_server is created, and the file is transferred from client t
 > ./tftp_c localhost 8090 GET abc.txt
 
 <div>
-  <img src="./Screenshot/GET_example.png" alt="Sorting" height="400dp">
+  <img src="./Screenshot/GET_example.png"  height="400dp">
 </div>
 
 
@@ -58,7 +58,7 @@ Newfile, readme.txt_GET is created, and the file is transferred from server to c
 > ./tftp_c localhost 7890 GET xyz.txt
 
 <div>
-  <img src="./Screenshot/GET_error.png" alt="Sorting" height="400dp">
+  <img src="./Screenshot/GET_error.png"  height="400dp">
 </div>
 
 
@@ -70,7 +70,7 @@ Error, the client and server side connection is terminated!!
 > ./tftp_c localhost 7890 PUT abc.txt
 
 <div>
-  <img src="./Screenshot/PUT_error2.png" alt="Sorting" height="400dp">
+  <img src="./Screenshot/PUT_error2.png" height="400dp">
 </div>
 
 Note if this case is run after case 2, error occurs, else the file is transferred to server and a new file is created!!
@@ -81,7 +81,7 @@ Note if this case is run after case 2, error occurs, else the file is transferre
 > ./tftp_c localhost 7890 PUT xyz.txt
 
 <div>
-  <img src="./Screenshot/PUT_error1.png" alt="Sorting" height="400dp">
+  <img src="./Screenshot/PUT_error1.png" height="400dp">
 </div>
 
 Error, the client and the server side connection is terminated!! 
