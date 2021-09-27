@@ -30,8 +30,8 @@ Different scenarios handled:
 
 1. When correct file is sent using PUT(the file is not already present in the server side)
 
-> ./tftp_s 8090 <br>
-> ./tftp_c localhost 8090 PUT abc.txt
+> ./tftp_s 1025 <br>
+> ./tftp_c localhost 1025 PUT abc.txt
 
 <div>
   <img src="./Screenshot/PUT_example.png" height="400dp">
