@@ -33,12 +33,22 @@ Different scenarios handled:
 > ./tftp_s 8090 <br>
 > ./tftp_c localhost 8090 PUT abc.txt
 
+<div>
+  <img src="./Screenshot/PUT_example.png" alt="Sorting" height="400dp">
+</div>
+
+
 Newfile, readme.txt_server is created, and the file is transferred from client to server!!
 
 2. When correct file is requested using GET.
 
 > ./tftp_s 8090 <br>
 > ./tftp_c localhost 8090 GET abc.txt
+
+<div>
+  <img src="./Screenshot/GET_example.png" alt="Sorting" height="400dp">
+</div>
+
 
 Newfile, readme.txt_GET is created, and the file is transferred from server to client!!
 
@@ -47,6 +57,11 @@ Newfile, readme.txt_GET is created, and the file is transferred from server to c
 > ./tftp_s 7890 <br>
 > ./tftp_c localhost 7890 GET xyz.txt
 
+<div>
+  <img src="./Screenshot/GET_error.png" alt="Sorting" height="400dp">
+</div>
+
+
 Error, the client and server side connection is terminated!!
 
 4. When incorrect file is sent using PUT(i.e, the file which is already in server is sent again)
@@ -54,11 +69,19 @@ Error, the client and server side connection is terminated!!
 > ./tftp_s 7890 <br>
 > ./tftp_c localhost 7890 PUT abc.txt
 
+<div>
+  <img src="./Screenshot/PUT_error2.png" alt="Sorting" height="400dp">
+</div>
+
 Note if this case is run after case 2, error occurs, else the file is transferred to server and a new file is created!!
 
 5. When incorrect file is sent using PUT(i.e, the file which is not present in client)
 
 > ./tftp_s 7890 <br>
 > ./tftp_c localhost 7890 PUT xyz.txt
+
+<div>
+  <img src="./Screenshot/PUT_error1.png" alt="Sorting" height="400dp">
+</div>
 
 Error, the client and the server side connection is terminated!! 
