@@ -35,7 +35,7 @@ Different scenarios handled:
 
 Newfile, readme.txt_server is created, and the file is transferred from client to server!!
 
-2.When correct file is requested using GET.
+2. When correct file is requested using GET.
 
 > ./tftp_s 8090 <br>
 > ./tftp_c localhost 8090 GET abc.txt
