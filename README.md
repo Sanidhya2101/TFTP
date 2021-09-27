@@ -38,7 +38,7 @@ Different scenarios handled:
 </div>
 
 
-Newfile, readme.txt_server is created, and the file is transferred from client to server!!
+Newfile, abc.txt_server is created, and the file is transferred from client to server!!
 
 2. When correct file is requested using GET.
 
@@ -50,7 +50,7 @@ Newfile, readme.txt_server is created, and the file is transferred from client t
 </div>
 
 
-Newfile, readme.txt_GET is created, and the file is transferred from server to client!!
+Newfile, abc.txt_GET is created, and the file is transferred from server to client!!
 
 3. When incorrect file is requested using GET(i.e, the file that is not present in the server)
 
